@@ -20,7 +20,12 @@ class ProductCard extends HTMLElement {
 
   addToCart() {
     // add to cart logic
-    this.openCartDrawer()
+    // fake delay to mimic fetch request
+    this.atcButton.classList.add("loading");
+    setTimeout(() => {
+      this.atcButton.classList.remove("loading");
+      this.openCartDrawer()
+    }, 1000);
   }
 }
 customElements.define("product-card", ProductCard);

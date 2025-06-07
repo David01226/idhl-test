@@ -36,7 +36,10 @@
         <div class="product-card__meta">
           <h3 class="product-card__title">Natures Menu Dog Food Can Chicken</h3>
           <h4 class="product-card__price">£22.81</h4>
-          <button class="product-card__atb atc-button">Add To Bag</button>
+          <button class="product-card__atb atc-button">
+            <span>Add To Bag</span>
+            <div class="spinner"></div>
+          </button>
         </div>
       </product-card>
     </div>
@@ -46,6 +49,21 @@
       <div class="cart-drawer__header">
         <h2 class="cart-drawer__title heading">Your Bag</h2>
         <img class="cart-drawer__close-btn" src="/assets/svg/close.svg" alt="close cart">
+      </div>
+      <div class="cart-drawer__body">
+        <div class="cart-drawer__line-item">
+          <img class="cart-drawer__line-item-img" src="/assets/png/chicken.png" alt="product image">
+          <div class="cart-drawer__line-item-meta">
+            <h3 class="cart-drawer__line-item-title">Natures Menu Dog Food Can Chicken</h3>
+            <h4 class="cart-drawer__line-item-price">£22.81</h4>
+            <button class="cart-drawer__line-item-remove">REMOVE</button>
+          </div>
+        </div>
+      </div>
+      <div class="cart-drawer__footer">
+        <div class="cart-drawer__sub-total">Subtotal: £22.81</div>
+        <button class="cart-drawer__checkout">Proceed To Checkout</button>
+        <button class="cart-drawer__continue">Continue Shopping</button>
       </div>
     </cart-drawer>
   </div>

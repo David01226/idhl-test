@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IDHL Test</title>
+
+  <!-- Import global styles -->
+  <link rel="stylesheet" href="assets/global.css" />
+
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="page-container">
+    <div class="header">
+      <div class="header-wrap page-width">
+        <img class="header__logo" src="assets/svg/logo.svg" alt="Bark Logo" />
+        <div class="header__bag-wrap">
+          <img class="header__bag" src="assets/svg/bag.svg" alt="Bag" />
+        </div>
+      </div>
+    </div>
+
+    <div class="page-left">
+      <div class="page-left__meta">
+        <h1 class="page-left__meta-title heading">Ornare Vulputate Elit</h1>
+        <p class="page-left__meta-desciption">Nullam quis risus eget urna mollis ornare vel eu leo. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Aenean lacinia bibendum nulla sed consectetur. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+      </div>
+    </div>
+    <div class="page-right">
+      <product-card>
+        <img class="product-card__img" src="/assets/png/chicken@2x.png" alt="product image">
+        <div class="product-card__meta">
+          <h3 class="product-card__title">Natures Menu Dog Food Can Chicken</h3>
+          <h4 class="product-card__price">£22.81</h4>
+          <button class="product-card__atb atc-button">Add To Bag</button>
+        </div>
+      </product-card>
+    </div>
+
+    <div class="overlay"></div>
+    <cart-drawer>
+      <div class="cart-drawer__header">
+        <h2 class="cart-drawer__title heading">Your Bag</h2>
+        <img class="cart-drawer__close-btn" src="/assets/svg/close.svg" alt="close cart">
+      </div>
+    </cart-drawer>
+  </div>
+
+  <!-- Import global JavaScript -->
+  <script src="assets/global.js" defer="defer"></script>
+</body>
+</html>

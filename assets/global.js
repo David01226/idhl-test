@@ -2,8 +2,8 @@ class ProductCard extends HTMLElement {
   constructor() {
     super();
 
-    this.atcButton = this.querySelector(".atc-button")
-    this.body = document.querySelector("body")
+    this.atcButton = this.querySelector(".atc-button");
+    this.body = document.querySelector("body");
   }
 
   connectedCallback() {
@@ -11,7 +11,7 @@ class ProductCard extends HTMLElement {
   }
 
   addEventListeners() {
-    this.atcButton.addEventListener("click", this.addToCart.bind(this))
+    this.atcButton.addEventListener("click", this.addToCart.bind(this));
   }
 
   openCartDrawer() {
@@ -24,7 +24,7 @@ class ProductCard extends HTMLElement {
     this.atcButton.classList.add("loading");
     setTimeout(() => {
       this.atcButton.classList.remove("loading");
-      this.openCartDrawer()
+      this.openCartDrawer();
     }, 1000);
   }
 }
@@ -34,10 +34,10 @@ class CartDrawer extends HTMLElement {
   constructor() {
     super();
 
-    this.closeButton = this.querySelector(".cart-drawer__close-btn")
-    this.overlay = document.querySelector(".overlay")
-    this.body = document.querySelector("body")
-    this.cartIcon = document.querySelector(".header__bag")
+    this.closeButton = this.querySelector(".cart-drawer__close-btn");
+    this.overlay = document.querySelector(".overlay");
+    this.body = document.querySelector("body");
+    this.cartIcon = document.querySelector(".header__bag");
   }
 
   connectedCallback() {
@@ -45,9 +45,9 @@ class CartDrawer extends HTMLElement {
   }
 
   addEventListeners() {
-    this.closeButton.addEventListener("click", this.closeCartDrawer.bind(this))
-    this.overlay.addEventListener("click", this.closeCartDrawer.bind(this))
-    this.cartIcon.addEventListener("click", this.openCartDrawer.bind(this))
+    this.closeButton.addEventListener("click", this.closeCartDrawer.bind(this));
+    this.overlay.addEventListener("click", this.closeCartDrawer.bind(this));
+    this.cartIcon.addEventListener("click", this.openCartDrawer.bind(this));
   }
 
   closeCartDrawer() {
@@ -57,6 +57,5 @@ class CartDrawer extends HTMLElement {
   openCartDrawer() {
     this.body.classList.add("cart-open");
   }
-
 }
 customElements.define("cart-drawer", CartDrawer);
